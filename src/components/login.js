@@ -9,6 +9,7 @@ const Login = () => {
         <Paper elevation={3} >
             <h1 align='center'>React App</h1>
             <Typography variant='h5'>Sign in</Typography>
+            {/* <Typography variant='h4'>Sign in</Typography> */}
             <TextField label="Username" placeholder="Enter username" fullWidth required />
             <TextField label="Password" placeholder="Enter password" type='password' fullWidth required />
             <FormControlLabel
@@ -20,7 +21,12 @@ const Login = () => {
                 }
                 label="Remember me"
             />
-            <Button fullWidth>Sign in</Button>
+            
+             {/* Contained button */}
+            <Button variant="contained" fullWidth>Sign in</Button>
+
+             {/* Outlined button */}
+            {/* <Button variant="outlined" fullWidth>Sign in</Button> */}
         </Paper>
     </Grid>
 }
