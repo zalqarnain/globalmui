@@ -2,16 +2,29 @@ import { TextField } from "@material-ui/core";
 import { createTheme } from "@material-ui/core/styles";
 
 export const customTheme=createTheme({
+
     typography:{
+      allVariants:{
+        color: 'purple'
+      },
         h5:{
-            fontSize:'25px'
+            fontSize:'25px',
+            color: 'green'
         },
         h4:{
-            fontSize:'30px'
+            fontSize:'30px',
+            color: 'blue'
         }
     },
     
     overrides: {
+
+      MuiDialogContent: {
+        root: {
+          backgroundColor: "orange", 
+          padding: "16px", 
+        },
+      },
         // Style sheet name ⚛️
         MuiButton: {
           // Name of the rule
@@ -39,7 +52,7 @@ export const customTheme=createTheme({
         },
         MuiPaper : {
             root: {
-                // Your custom styles for MuiCard
+                
                 backgroundColor: 'lightgray',
                 border: '1px solid gray',
                 padding: 30, 
@@ -48,14 +61,31 @@ export const customTheme=createTheme({
                 margin: "0 auto" 
               },
         }, 
+        MuiCard : {
+          root: {
+              
+              backgroundColor: 'blue',
+              border: '1px solid white',
+              padding: 30, 
+              height: '70vh', 
+              maxWidth: 280, 
+              margin: "0 auto" 
+            },
+      }, 
         MuiTextField : {
             root: {
-                // Your custom styles for MuiCard
+                
                 backgroundColor: 'white',
                 border: '1px solid gray',
 
               },
+        },
+
+        MuiCircularProgress : {
+          root: {
+            color: 'red'
+          }
         }
+
       },
-    
 })
